@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 14.625" name="TowerDefence">
+  <DataContextMoniker Name="/TowerDefenceDataContext" />
+  <nestedChildShapes>
+    <classShape Id="dfabad1b-1fba-4fde-bfc1-9010f108be65" absoluteBounds="0.75, 6.625, 2, 1.7708968098958318">
+      <DataClassMoniker Name="/TowerDefenceDataContext/Budynek" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d31449ac-2a7c-4faa-98ab-e6777e87d873" absoluteBounds="0.765, 7.085, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2053e5d1-8286-4499-9599-3b92dd026b59" absoluteBounds="6.25, 5.75, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/TowerDefenceDataContext/Zbudowany_Z" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8f92fb17-80bb-4da1-918b-b22518a7b062" absoluteBounds="6.265, 6.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8439ec5f-a514-4c67-a7ec-2998a0007113" absoluteBounds="0.75, 3.875, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/TowerDefenceDataContext/Fala" />
+      <nestedChildShapes>
+        <elementListCompartment Id="322b767f-600e-492d-a33a-793e49ec097f" absoluteBounds="0.765, 4.335, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="47b2c955-0f28-4a29-b219-742b53f3e5d5" absoluteBounds="3.5, 3.75, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/TowerDefenceDataContext/Log_Budynku" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ad4b4b10-addc-4065-85c0-609f074aaf2f" absoluteBounds="3.515, 4.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a10c12ee-c4a4-49e2-8250-7a6517f1cce7" absoluteBounds="3.5, 0.75, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/TowerDefenceDataContext/Log_Surowca" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ff71cbf2-1c72-4013-84ac-89956ca98f48" absoluteBounds="3.515, 1.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0e38e047-d18a-4f58-9d45-ada13d298a9f" absoluteBounds="3.5, 6.75, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/TowerDefenceDataContext/Sklad_Fali" />
+      <nestedChildShapes>
+        <elementListCompartment Id="fe14f410-18d4-4c33-8b80-0bf4b91282ea" absoluteBounds="3.515, 7.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="13a0bbbd-5aaa-4d71-b521-4c1e05c99265" absoluteBounds="0.75, 1.625, 2, 1.3862939453125003">
+      <DataClassMoniker Name="/TowerDefenceDataContext/Surowiec" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ac781223-4680-4d05-9a30-1693f2a4e3f3" absoluteBounds="0.765, 2.085, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="23499648-9a8b-4885-8317-62fd438380af" absoluteBounds="1.5, 9.625, 2, 1.7708968098958344">
+      <DataClassMoniker Name="/TowerDefenceDataContext/Typ_Budynku" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ba5af116-c16a-49d7-aa54-d980f83fc424" absoluteBounds="1.5150000000000001, 10.085, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="22b5bac9-8a1d-4b89-bcc1-b7de8aa5ed0d" absoluteBounds="0.75, 12.75, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/TowerDefenceDataContext/Typ_Przeciwnika" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c389c798-5d2c-42d9-bc68-190aec731f67" absoluteBounds="0.765, 13.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 4.56814697265625); (3.04166666666667 : 4.56814697265625 : JumpStart); (3.20833333333333 : 4.56814697265625 : JumpEnd); (3.5 : 4.56814697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/TowerDefenceDataContext/Fala/Fala_Log_Budynku" />
+      <nodes>
+        <classShapeMoniker Id="8439ec5f-a514-4c67-a7ec-2998a0007113" />
+        <classShapeMoniker Id="47b2c955-0f28-4a29-b219-742b53f3e5d5" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 6.625); (2.90982443490112 : 6.46517556509888 : JumpStart); (3.02767556509888 : 6.34732443490112 : JumpEnd); (3.125 : 6.25); (3.125 : 4.12782148632813); (3.5 : 4.12782148632813)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/TowerDefenceDataContext/Budynek/Budynek_Log_Budynku" />
+      <nodes>
+        <classShapeMoniker Id="dfabad1b-1fba-4fde-bfc1-9010f108be65" />
+        <classShapeMoniker Id="47b2c955-0f28-4a29-b219-742b53f3e5d5" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 3.875); (3.125 : 3.5); (3.125 : 1.53929768880208); (3.5 : 1.53929768880208)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/TowerDefenceDataContext/Fala/Fala_Log_Surowca" />
+      <nodes>
+        <classShapeMoniker Id="8439ec5f-a514-4c67-a7ec-2998a0007113" />
+        <classShapeMoniker Id="a10c12ee-c4a4-49e2-8250-7a6517f1cce7" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 5.1994429077524); (3.06607443490112 : 5.51551734265353 : JumpStart); (3.18392556509888 : 5.63336847285128 : JumpEnd); (3.3125 : 5.7619429077524); (3.3125 : 7.53929768880208); (3.5 : 7.53929768880208)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/TowerDefenceDataContext/Fala/Fala_Sklad_Fali" />
+      <nodes>
+        <classShapeMoniker Id="8439ec5f-a514-4c67-a7ec-2998a0007113" />
+        <classShapeMoniker Id="0e38e047-d18a-4f58-9d45-ada13d298a9f" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 2.70119466145833); (3.04166666666667 : 2.70119466145833 : JumpStart); (3.20833333333333 : 2.70119466145833 : JumpEnd); (7.25 : 2.70119466145833); (7.25 : 5.75)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/TowerDefenceDataContext/Surowiec/Surowiec_Zbudowany_Z" />
+      <nodes>
+        <classShapeMoniker Id="13a0bbbd-5aaa-4d71-b521-4c1e05c99265" />
+        <classShapeMoniker Id="2053e5d1-8286-4499-9599-3b92dd026b59" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 1.97679768880208); (3.04166666666667 : 1.97679768880208 : JumpStart); (3.20833333333333 : 1.97679768880208 : JumpEnd); (3.5 : 1.97679768880208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/TowerDefenceDataContext/Surowiec/Surowiec_Log_Surowca" />
+      <nodes>
+        <classShapeMoniker Id="13a0bbbd-5aaa-4d71-b521-4c1e05c99265" />
+        <classShapeMoniker Id="a10c12ee-c4a4-49e2-8250-7a6517f1cce7" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.125 : 9.625); (2.125 : 8.39589680989583)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/TowerDefenceDataContext/Typ_Budynku/Typ_Budynku_Budynek" />
+      <nodes>
+        <classShapeMoniker Id="23499648-9a8b-4885-8317-62fd438380af" />
+        <classShapeMoniker Id="dfabad1b-1fba-4fde-bfc1-9010f108be65" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.96875 : 9.625); (2.96875 : 6.15625); (3.04166666666667 : 6.15625 : JumpStart); (3.20833333333333 : 6.15625 : JumpEnd); (3.22916666666667 : 6.15625 : JumpStart); (3.39583333333333 : 6.15625 : JumpEnd); (6.25 : 6.15625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/TowerDefenceDataContext/Typ_Budynku/Typ_Budynku_Zbudowany_Z" />
+      <nodes>
+        <classShapeMoniker Id="23499648-9a8b-4885-8317-62fd438380af" />
+        <classShapeMoniker Id="2053e5d1-8286-4499-9599-3b92dd026b59" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 13.5392976888021); (4.53125 : 13.5392976888021); (4.53125 : 8.32859537760417)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/TowerDefenceDataContext/Typ_Przeciwnika/Typ_Przeciwnika_Sklad_Fali" />
+      <nodes>
+        <classShapeMoniker Id="22b5bac9-8a1d-4b89-bcc1-b7de8aa5ed0d" />
+        <classShapeMoniker Id="0e38e047-d18a-4f58-9d45-ada13d298a9f" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

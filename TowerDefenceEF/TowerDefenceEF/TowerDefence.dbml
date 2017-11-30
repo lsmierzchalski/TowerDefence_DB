@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="TowerDefence_Test2" Class="TowerDefenceDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=LUKIYOGA-PC\SQLEXPRESS;Initial Catalog=TowerDefence_Test2;Integrated Security=True;Pooling=False" SettingsObjectName="TowerDefenceEF.Properties.Settings" SettingsPropertyName="TowerDefence_Test2ConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Budynek" Member="Budyneks">
+    <Type Name="Budynek">
+      <Column Name="IdBudynku" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IdTypuBudynku" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PoziomRozwoju" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PozycjaNaMapieX" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PozycjaNaMapieY" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Budynek_Log_Budynku" Member="Log_Budynkus" ThisKey="IdBudynku" OtherKey="IdBudynku" Type="Log_Budynku" />
+      <Association Name="Typ_Budynku_Budynek" Member="Typ_Budynku" ThisKey="IdTypuBudynku" OtherKey="IdTypuBudynku" Type="Typ_Budynku" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[Zbudowany Z]" Member="Zbudowany_Zs">
+    <Type Name="Zbudowany_Z">
+      <Column Name="IdZbudowanyZ" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IdTypuBudynku" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IdTypuSurowca" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Ilosc" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Surowiec_Zbudowany_Z" Member="Surowiec" ThisKey="IdTypuSurowca" OtherKey="IdSurowca" Type="Surowiec" IsForeignKey="true" />
+      <Association Name="Typ_Budynku_Zbudowany_Z" Member="Typ_Budynku" ThisKey="IdTypuBudynku" OtherKey="IdTypuBudynku" Type="Typ_Budynku" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Fala" Member="Falas">
+    <Type Name="Fala">
+      <Column Name="IdFali" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Nazwa" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="NumerFali" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Fala_Log_Budynku" Member="Log_Budynkus" ThisKey="IdFali" OtherKey="IdFali" Type="Log_Budynku" />
+      <Association Name="Fala_Log_Surowca" Member="Log_Surowcas" ThisKey="IdFali" OtherKey="IdFali" Type="Log_Surowca" />
+      <Association Name="Fala_Sklad_Fali" Member="Sklad_Falis" ThisKey="IdFali" OtherKey="IdFali" Type="Sklad_Fali" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[Log Budynku]" Member="Log_Budynkus">
+    <Type Name="Log_Budynku">
+      <Column Name="IdLoguBudynku" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IdFali" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IdBudynku" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PoziomRozwoju" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Fala_Log_Budynku" Member="Fala" ThisKey="IdFali" OtherKey="IdFali" Type="Fala" IsForeignKey="true" />
+      <Association Name="Budynek_Log_Budynku" Member="Budynek" ThisKey="IdBudynku" OtherKey="IdBudynku" Type="Budynek" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[Log Surowca]" Member="Log_Surowcas">
+    <Type Name="Log_Surowca">
+      <Column Name="IdLoguSurowca" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IdTypuSurowca" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Ilosc" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IdFali" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Fala_Log_Surowca" Member="Fala" ThisKey="IdFali" OtherKey="IdFali" Type="Fala" IsForeignKey="true" />
+      <Association Name="Surowiec_Log_Surowca" Member="Surowiec" ThisKey="IdTypuSurowca" OtherKey="IdSurowca" Type="Surowiec" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[Sklad Fali]" Member="Sklad_Falis">
+    <Type Name="Sklad_Fali">
+      <Column Name="IdSkladuFali" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IdFali" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IdTypuPrzeciwnika" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Ilosc" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Fala_Sklad_Fali" Member="Fala" ThisKey="IdFali" OtherKey="IdFali" Type="Fala" IsForeignKey="true" />
+      <Association Name="Typ_Przeciwnika_Sklad_Fali" Member="Typ_Przeciwnika" ThisKey="IdTypuPrzeciwnika" OtherKey="IdTypuPrzeciwnika" Type="Typ_Przeciwnika" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Surowiec" Member="Surowiecs">
+    <Type Name="Surowiec">
+      <Column Name="IdSurowca" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Nazwa" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Ilosc" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Surowiec_Zbudowany_Z" Member="Zbudowany_Zs" ThisKey="IdSurowca" OtherKey="IdTypuSurowca" Type="Zbudowany_Z" />
+      <Association Name="Surowiec_Log_Surowca" Member="Log_Surowcas" ThisKey="IdSurowca" OtherKey="IdTypuSurowca" Type="Log_Surowca" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[Typ Budynku]" Member="Typ_Budynkus">
+    <Type Name="Typ_Budynku">
+      <Column Name="IdTypuBudynku" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Nazwa" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="MaksymalnyPoziomRozwoju" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ZasiegAtaku" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="SzybkoscAtaku" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Association Name="Typ_Budynku_Budynek" Member="Budyneks" ThisKey="IdTypuBudynku" OtherKey="IdTypuBudynku" Type="Budynek" />
+      <Association Name="Typ_Budynku_Zbudowany_Z" Member="Zbudowany_Zs" ThisKey="IdTypuBudynku" OtherKey="IdTypuBudynku" Type="Zbudowany_Z" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[Typ Przeciwnika]" Member="Typ_Przeciwnikas">
+    <Type Name="Typ_Przeciwnika">
+      <Column Name="IdTypuPrzeciwnika" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Nazwa" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="Pancerz" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="SzybkoscRuchu" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Association Name="Typ_Przeciwnika_Sklad_Fali" Member="Sklad_Falis" ThisKey="IdTypuPrzeciwnika" OtherKey="IdTypuPrzeciwnika" Type="Sklad_Fali" />
+    </Type>
+  </Table>
+</Database>

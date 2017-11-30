@@ -1,0 +1,44 @@
+﻿<Window x:Class="TowerDefenceEF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TowerDefenceEF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="517.575" Width="904.696">
+    <Grid>
+        <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Typ Budynku" VerticalAlignment="Top"/>
+        <DataGrid x:Name="dataGrid" HorizontalAlignment="Left" Margin="10,30,0,0" VerticalAlignment="Top" Height="447" Width="449" MouseLeftButtonDown="zaznaczDoEdycji"/>
+
+        <TextBlock HorizontalAlignment="Left" Margin="532,35,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="Nazwa:"/>
+        <TextBlock HorizontalAlignment="Left" Margin="532,63,0,0" TextWrapping="Wrap" Text="Maksymalny Poziom Rozwoju:" VerticalAlignment="Top" Width="268"/>
+        <TextBlock HorizontalAlignment="Left" Margin="532,91,0,0" TextWrapping="Wrap" Text="Zasieg Ataku:" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="532,119,0,0" TextWrapping="Wrap" Text="Szybkość Ataku:" VerticalAlignment="Top"/>
+
+        <TextBox x:Name="tB_nazwa_insert" HorizontalAlignment="Left" Height="23" Margin="699,34,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="188"/>
+        <TextBox x:Name="tB_mpr_insert" HorizontalAlignment="Left" Height="23" Margin="699,62,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="188"/>
+        <TextBox x:Name="tB_za_insert" HorizontalAlignment="Left" Height="23" Margin="699,90,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="188"/>
+        <TextBox x:Name="tB_sa_insert" HorizontalAlignment="Left" Height="23" Margin="699,118,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="188"/>
+
+        <Button x:Name="button_insert" Content="Dodaj nowy Typ Budynku" HorizontalAlignment="Left" Margin="699,146,0,0" VerticalAlignment="Top" Width="188" Height="30" Click="dodajNowyTypBudynku"/>
+
+        
+        <TextBlock HorizontalAlignment="Left" Margin="532,210,0,0" TextWrapping="Wrap" Text="Id:" VerticalAlignment="Top"/>
+        <TextBox x:Name="tB_id_delete" HorizontalAlignment="Left" Height="23" Margin="699,209,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="188"/>
+        <Button x:Name="button_delete" Content="Usuń Typ Budynku o podanym Id" HorizontalAlignment="Left" Margin="699,237,0,0" VerticalAlignment="Top" Width="188" Height="30" Click="usunTypBudynku"/>
+
+        <TextBlock HorizontalAlignment="Left" Margin="532,308,0,0" TextWrapping="Wrap" Text="Id:" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="532,336,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="Nazwa:"/>
+        <TextBlock HorizontalAlignment="Left" Margin="532,364,0,0" TextWrapping="Wrap" Text="Maksymalny Poziom Rozwoju:" VerticalAlignment="Top" Width="268"/>
+        <TextBlock HorizontalAlignment="Left" Margin="532,392,0,0" TextWrapping="Wrap" Text="Zasieg Ataku:" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="532,420,0,0" TextWrapping="Wrap" Text="Szybkość Ataku:" VerticalAlignment="Top"/>
+        
+        <TextBox x:Name="tB_nazwa_update" HorizontalAlignment="Left" Height="23" Margin="699,335,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="188"/>
+        <TextBox x:Name="tB_mpr_update" HorizontalAlignment="Left" Height="23" Margin="699,363,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="188"/>
+        <TextBox x:Name="tB_za_update" HorizontalAlignment="Left" Height="23" Margin="699,391,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="188"/>
+        <TextBox x:Name="tB_sa_update" HorizontalAlignment="Left" Height="23" Margin="699,419,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="188"/>
+        <TextBox x:Name="tB_id_update" HorizontalAlignment="Left" Height="23" Margin="699,307,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="188"/>
+        <Button x:Name="button_update" Content="Zaktualizuj Typ Budynku o podanym Id" HorizontalAlignment="Left" Margin="699,447,0,0" VerticalAlignment="Top" Width="188" Height="30" Click="zaktualizujTypBudynku"/>
+
+    </Grid>
+</Window>

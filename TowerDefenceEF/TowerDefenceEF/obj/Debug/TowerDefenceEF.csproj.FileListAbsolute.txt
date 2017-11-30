@@ -1,0 +1,14 @@
+C:\PROJEKTY\TowerDefence\TowerDefenceEF\TowerDefenceEF\bin\Debug\TowerDefenceEF.exe.config
+C:\PROJEKTY\TowerDefence\TowerDefenceEF\TowerDefenceEF\bin\Debug\TowerDefenceEF.exe
+C:\PROJEKTY\TowerDefence\TowerDefenceEF\TowerDefenceEF\bin\Debug\TowerDefenceEF.pdb
+C:\PROJEKTY\TowerDefence\TowerDefenceEF\TowerDefenceEF\obj\Debug\TowerDefenceEF.csprojResolveAssemblyReference.cache
+C:\PROJEKTY\TowerDefence\TowerDefenceEF\TowerDefenceEF\obj\Debug\MainWindow.g.cs
+C:\PROJEKTY\TowerDefence\TowerDefenceEF\TowerDefenceEF\obj\Debug\App.g.cs
+C:\PROJEKTY\TowerDefence\TowerDefenceEF\TowerDefenceEF\obj\Debug\TowerDefenceEF_MarkupCompile.cache
+C:\PROJEKTY\TowerDefence\TowerDefenceEF\TowerDefenceEF\obj\Debug\TowerDefenceEF_MarkupCompile.lref
+C:\PROJEKTY\TowerDefence\TowerDefenceEF\TowerDefenceEF\obj\Debug\MainWindow.baml
+C:\PROJEKTY\TowerDefence\TowerDefenceEF\TowerDefenceEF\obj\Debug\TowerDefenceEF.g.resources
+C:\PROJEKTY\TowerDefence\TowerDefenceEF\TowerDefenceEF\obj\Debug\TowerDefenceEF.Properties.Resources.resources
+C:\PROJEKTY\TowerDefence\TowerDefenceEF\TowerDefenceEF\obj\Debug\TowerDefenceEF.csproj.GenerateResource.Cache
+C:\PROJEKTY\TowerDefence\TowerDefenceEF\TowerDefenceEF\obj\Debug\TowerDefenceEF.exe
+C:\PROJEKTY\TowerDefence\TowerDefenceEF\TowerDefenceEF\obj\Debug\TowerDefenceEF.pdb
