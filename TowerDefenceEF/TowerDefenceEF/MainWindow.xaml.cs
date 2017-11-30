@@ -21,6 +21,8 @@ namespace TowerDefenceEF
     /// </summary>
     public partial class MainWindow : Window
     {
+        private static List<SQL.Typ_Budynku> listTypBudynku; 
+
         public MainWindow()
         {
             InitializeComponent();
@@ -30,6 +32,8 @@ namespace TowerDefenceEF
 
         private void readDatabase()
         {
+            listTypBudynku = new List<SQL.Typ_Budynku>();
+
             using (SQL.TowerDefenceDataContext db = new SQL.TowerDefenceDataContext())
             {
                 var data = from t in db.Typ_Budynkus
@@ -41,6 +45,17 @@ namespace TowerDefenceEF
                                Zasieg = t.ZasiegAtaku,
                                Szybkosc = t.SzybkoscAtaku
                            };
+
+                foreach (var detail in data)
+                {
+                    SQL.Typ_Budynku tmp = new SQL.Typ_Budynku();
+                    tmp.IdTypuBudynku = detail.Id;
+                    tmp.Nazwa = detail.Nazwa;
+                    tmp.MaksymalnyPoziomRozwoju = detail.Max_Lvl;
+                    tmp.ZasiegAtaku = detail.Zasieg;
+                    tmp.SzybkoscAtaku = detail.Szybkosc;
+                    listTypBudynku.Add(tmp);
+                }
 
                 dataGrid.ItemsSource = data;
             }
@@ -77,22 +92,34 @@ namespace TowerDefenceEF
                         }
                         catch (Exception ex)
                         {
-                            MessageBox.Show("ERROR: DB\n"+ex);
+                            MessageBox.Show("Błąd: " + ex);
                             db.SubmitChanges();
                         }
                     }
                 }
                 else
                 {
-                    MessageBox.Show("ERROR: TYPE");
+                    MessageBox.Show("Błąd: Niepoprawne typy danych");
                 }
             }
             else
             {
-                MessageBox.Show("ERROR: NULL");
+                MessageBox.Show("Błąd: Pusta wartość");
             }
 
             readDatabase();
+
+            dataGrid.SelectedItems.Clear();
+            
+            object item = dataGrid.Items[listTypBudynku.Count-1];
+            dataGrid.SelectedItem = item;
+
+            DataGridRow row = dataGrid.ItemContainerGenerator.ContainerFromIndex(listTypBudynku.Count - 1) as DataGridRow;
+            if (row == null)
+            {
+                dataGrid.ScrollIntoView(item);
+                row = dataGrid.ItemContainerGenerator.ContainerFromIndex(listTypBudynku.Count - 1) as DataGridRow;
+            }
         }
 
         private void usunTypBudynku(object sender, RoutedEventArgs e)
@@ -112,7 +139,7 @@ namespace TowerDefenceEF
 
                         if (deleteOrderDetails.Count<SQL.Typ_Budynku>() == 0)
                         {
-                            MessageBox.Show("ERROR: ROW NOT EXIST");
+                            MessageBox.Show("Błąd: Wiersz o podanym Id nie istnieje");
                             return;
                         }
 
@@ -127,7 +154,7 @@ namespace TowerDefenceEF
                         }
                         catch (Exception ex)
                         {
-                            MessageBox.Show("ERROR: DB\n" + ex);
+                            MessageBox.Show("Błąd: " + ex);
                         }
                     }
                 }
@@ -168,7 +195,7 @@ namespace TowerDefenceEF
 
                         if (query.Count<SQL.Typ_Budynku>() == 0)
                         {
-                            MessageBox.Show("ERROR: ROW NOT EXIST");
+                            MessageBox.Show("Błąd: Wiersz o podanym Id nie istnieje");
                             return;
                         }
                         
@@ -186,8 +213,32 @@ namespace TowerDefenceEF
                         }
                         catch (Exception ex)
                         {
-                            Console.WriteLine(ex);
+                            MessageBox.Show("Błąd: "+ex);
                         }
+                    }
+
+                    readDatabase();
+
+                    dataGrid.SelectedItems.Clear();
+
+                    int index = 0;
+                    for(int i=0; i<listTypBudynku.Count; i++)
+                    {
+                        if (listTypBudynku[i].IdTypuBudynku == id)
+                        {
+                            index = i;
+                            break;
+                        }
+                    }
+
+                    object item = dataGrid.Items[index];
+                    dataGrid.SelectedItem = item;
+
+                    DataGridRow row = dataGrid.ItemContainerGenerator.ContainerFromIndex(index) as DataGridRow;
+                    if (row == null)
+                    {
+                        dataGrid.ScrollIntoView(item);
+                        row = dataGrid.ItemContainerGenerator.ContainerFromIndex(index) as DataGridRow;
                     }
                 }
                 else
@@ -199,8 +250,6 @@ namespace TowerDefenceEF
             {
                 MessageBox.Show("ERROR: NULL");
             }
-
-            readDatabase();
         }
 
         private void zaznaczDoEdycji(object sender, MouseButtonEventArgs e)
