@@ -21,10 +21,14 @@
 
         <Grid Grid.ColumnSpan="2">
             <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Typ Budynku" VerticalAlignment="Top"/>
-            <DataGrid x:Name="dataGrid" HorizontalAlignment="Stretch" Margin="10,30,10,10" VerticalAlignment="Stretch" MouseLeftButtonDown="zaznaczDoEdycji" SelectionUnit="FullRow"/>
+            <DataGrid x:Name="dataGrid" HorizontalAlignment="Stretch" Margin="10,30,10,10" VerticalAlignment="Stretch" MouseLeftButtonDown="zaznaczDoEdycji" SelectionUnit="FullRow">
+                <DataGrid.Resources>
+                    <SolidColorBrush x:Key="{x:Static SystemColors.HighlightBrushKey}" Color="#FF0000"/>
+                </DataGrid.Resources>
+            </DataGrid>
         </Grid>
 
-        <Grid Grid.Column="2" Grid.Row="1" Grid.ColumnSpan="2">
+        <Grid Grid.Column="2" Grid.ColumnSpan="2" Margin="5,0,-5,0">
             <TextBlock HorizontalAlignment="Left" Margin="10,35,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="Nazwa:"/>
             <TextBlock HorizontalAlignment="Left" Margin="10,63,0,0" TextWrapping="Wrap" Text="Maksymalny Poziom Rozwoju:" VerticalAlignment="Top" Width="268"/>
             <TextBlock HorizontalAlignment="Left" Margin="10,91,0,0" TextWrapping="Wrap" Text="Zasieg Ataku:" VerticalAlignment="Top"/>
@@ -54,6 +58,7 @@
             <TextBox x:Name="tB_sa_update" HorizontalAlignment="Left" Height="23" Margin="180,419,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="188"/>
             <TextBox x:Name="tB_id_update" HorizontalAlignment="Left" Height="23" Margin="180,307,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="188"/>
             <Button x:Name="button_update" Content="Zaktualizuj Typ Budynku o podanym Id" HorizontalAlignment="Left" Margin="180,447,0,0" VerticalAlignment="Top" Width="188" Height="30" Click="zaktualizujTypBudynku"/>
+            
         </Grid>
 
     </Grid>

@@ -92,7 +92,7 @@ namespace TowerDefenceEF
                         }
                         catch (Exception ex)
                         {
-                            MessageBox.Show("Błąd: " + ex);
+                            MessageBox.Show("Błąd: " + ex.Message);
                             db.SubmitChanges();
                         }
                     }
@@ -154,7 +154,7 @@ namespace TowerDefenceEF
                         }
                         catch (Exception ex)
                         {
-                            MessageBox.Show("Błąd: " + ex);
+                            MessageBox.Show("Błąd: " + ex.Message);
                         }
                     }
                 }
@@ -213,7 +213,7 @@ namespace TowerDefenceEF
                         }
                         catch (Exception ex)
                         {
-                            MessageBox.Show("Błąd: "+ex);
+                            MessageBox.Show("Błąd: "+ex.Message);
                         }
                     }
 
