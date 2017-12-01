@@ -93,7 +93,6 @@ namespace TowerDefenceEF
                         catch (Exception ex)
                         {
                             MessageBox.Show("Błąd: " + ex.Message);
-                            db.SubmitChanges();
                         }
                     }
                 }
