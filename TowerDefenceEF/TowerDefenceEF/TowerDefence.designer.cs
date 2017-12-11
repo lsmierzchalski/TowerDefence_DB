@@ -22,7 +22,7 @@ namespace TowerDefenceEF.SQL
 	using System;
 	
 	
-	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="TowerDefence_Test")]
+	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="TowerDefence_Test2")]
 	public partial class TowerDefenceDataContext : System.Data.Linq.DataContext
 	{
 		
@@ -60,7 +60,7 @@ namespace TowerDefenceEF.SQL
     #endregion
 		
 		public TowerDefenceDataContext() : 
-				base(global::TowerDefenceEF.Properties.Settings.Default.TowerDefence_TestConnectionString, mappingSource)
+				base(global::TowerDefenceEF.Properties.Settings.Default.TowerDefence_Test2ConnectionString, mappingSource)
 		{
 			OnCreated();
 		}
