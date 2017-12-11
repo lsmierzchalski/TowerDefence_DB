@@ -1,5 +1,5 @@
-﻿<?xml version="1.0" encoding="utf-8"?><Database Name="TowerDefence_Test2" Class="TowerDefenceDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=LUKIYOGA-PC\SQLEXPRESS;Initial Catalog=TowerDefence_Test2;Integrated Security=True;Pooling=False" SettingsObjectName="TowerDefenceEF.Properties.Settings" SettingsPropertyName="TowerDefence_Test2ConnectionString" Provider="System.Data.SqlClient" />
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="TowerDefence_Test" Class="TowerDefenceDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=localhost;Initial Catalog=TowerDefence_Test;Integrated Security=True" SettingsObjectName="TowerDefenceEF.Properties.Settings" SettingsPropertyName="TowerDefence_TestConnectionString" Provider="System.Data.SqlClient" />
   <Table Name="dbo.Budynek" Member="Budyneks">
     <Type Name="Budynek">
       <Column Name="IdBudynku" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />

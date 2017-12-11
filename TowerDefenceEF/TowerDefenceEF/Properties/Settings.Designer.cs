@@ -33,5 +33,15 @@ namespace TowerDefenceEF.Properties {
                 return ((string)(this["TowerDefence_Test2ConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=localhost;Initial Catalog=TowerDefence_Test;Integrated Security=True")]
+        public string TowerDefence_TestConnectionString {
+            get {
+                return ((string)(this["TowerDefence_TestConnectionString"]));
+            }
+        }
     }
 }
